@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "BMP180.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,6 +57,11 @@ static void MX_I2C1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+
+float temperature;
+float pressure;
+float altitude;
 
 /* USER CODE END 0 */
 
@@ -100,6 +105,23 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+	  BMP180_Start();
+
+	  temperature = BMP180_GetTemp(); // C
+	  pressure = BMP180_GetPress(0); // Pa
+	  altitude = BMP180_GetAlt(0); // m
+
+	  if(temperature >= 32.5)
+	  {
+		  HAL_GPIO_WritePin(GPIOA, Led_Pin, GPIO_PIN_SET);
+	  }
+	  else
+	  {
+		  HAL_GPIO_WritePin(GPIOA, Led_Pin, GPIO_PIN_RESET);
+	  }
+
+	  HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }
