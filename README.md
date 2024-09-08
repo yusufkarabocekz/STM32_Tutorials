@@ -31,10 +31,10 @@ Explore the use of interrupts to handle button presses for LED control. This pro
 
 ## 3. ADC with Potentiometer
 
-Use the Analog-to-Digital Converter (ADC) to read values from a potentiometer. This project is essential for understanding how to interface analog sensors with the STM32.
+Use the Analog-to-Digital Converter (ADC) to read the values from the potentiometer and the LM35 sensor. This project is necessary to understand how to interface analog sensors with the STM32
 
 - **Project Name:** `Potentiometer_ADC_Reader`
-- **Description:** Read potentiometer values using the ADC and convert them into digital signals.
+- **Description:** Read potentiometer and LM35 values using the ADC and convert them into digital signals.
 
 ## 4. DMA with ADC
 
@@ -66,21 +66,21 @@ Explore UART communication by sending and receiving data between the STM32 and a
 
 ## 8. I2C Communication
 
-Learn how to communicate with I2C-compatible devices such as sensors or displays. This project covers both master and slave configurations.
+Learn how to communicate with I2C-compatible devices such as sensors or displays. In this project, temperature, altitude and pressure data are read with the BMP180 sensor.
 
 - **Project Name:** `I2C_Sensor_Reading`
 - **Description:** Interface with I2C devices to read sensor data.
 
 ## 9. SPI Communication
 
-Delve into SPI communication to exchange data with SPI peripherals like sensors, memory modules, or displays.
+Dive into SPI communication to exchange data with SPI peripherals such as sensors, memory modules or displays. In this project, 3 Oct acceleration data is read with the ADXL sensor.
 
 - **Project Name:** `SPI_Sensor_Reading`
 - **Description:** Implement SPI communication to interact with external devices.
 
 ## 10. RTOS with FreeRTOS
 
-Get started with Real-Time Operating Systems (RTOS) by using FreeRTOS to manage multiple tasks on the STM32. This project is ideal for building more complex, real-time applications.
+FreeRTOS-based project to control multiple LEDs with different blinking intervals using task scheduling. Demonstrates the basics of real-time task management in embedded systems
 
 - **Project Name:** `FreeRTOS_LED_Tasks`
 - **Description:** Manage tasks using FreeRTOS to control multiple operations in real-time.
